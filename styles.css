@@ -1,0 +1,255 @@
+:root {
+    --color-green-50: #f0fdf4;
+    --color-green-600: #16a34a;
+    --color-green-700: #15803d;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-900: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--color-green-50), white);
+}
+
+.navigation {
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-green-600);
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-gray-600);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--color-green-600);
+}
+
+.signup-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-green-600);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.signup-btn:hover {
+    background: var(--color-green-700);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero .highlight {
+    color: var(--color-green-600);
+}
+
+.hero p {
+    max-width: 48rem;
+    margin: 0 auto;
+    color: var(--color-gray-500);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 4rem 0;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.feature-header i {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-green-600);
+}
+
+.feature-header h3 {
+    font-size: 1.25rem;
+    color: var(--color-gray-900);
+}
+
+.feature-card p {
+    color: var(--color-gray-500);
+    margin-bottom: 1rem;
+}
+
+.feature-card button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: var(--color-green-50);
+    color: var(--color-green-600);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.feature-card button:hover {
+    background: #dcfce7;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    color: var(--color-gray-900);
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    color: var(--color-gray-500);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-buttons button {
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cta-buttons .primary {
+    background: var(--color-green-600);
+    color: white;
+    border: none;
+}
+
+.cta-buttons .primary:hover {
+    background: var(--color-green-700);
+}
+
+.cta-buttons .secondary {
+    background: white;
+    color: var(--color-green-600);
+    border: 1px solid var(--color-green-600);
+}
+
+.cta-buttons .secondary:hover {
+    background: var(--color-green-50);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
